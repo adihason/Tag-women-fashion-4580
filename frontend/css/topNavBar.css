@@ -1,0 +1,59 @@
+.bg-dark {
+    background-color: #000000!important;
+}
+#sale-link{
+    color: red;
+}
+
+#my-nav-bar-style {
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    font-size: 17px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#site-name-title{
+    font-family: 'Monoton', cursive;
+    font-size: 26px;
+    color: white;
+}
+
+div#right-icons {
+    display: flex;
+    font-size: 19px;
+    position: relative;
+    right: -446px;
+}
+
+button#login-dropdown-btn {
+    background-color: black;
+    color: white;
+    border: black;
+    position: absolute;
+    top: 7px;
+}
+
+div#login-dropdown {
+    position: absolute;
+    left: -129px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #000000;
+}
+
+span#welcome-user {
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 86px;
+    font-size: 14px;
+
+}

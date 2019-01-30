@@ -1,0 +1,37 @@
+span.title-login {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1#login-title {
+    margin-left: 607px;
+    margin-top: 61px;
+}
+
+h1{
+    font-family: 'Monoton', cursive;
+}
+
+h1#register-title {
+    margin-left: 601px;
+    margin-top: 61px;
+}
+
+.link-to-home{
+    color: black;
+    font-family: 'Monoton', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.link-to-home:hover {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.pages-title {
+    font-family: 'Monoton', cursive;
+    position: absolute;
+    top: 62px;
+    left: 68px;
+}

@@ -1,0 +1,55 @@
+#login-button {
+    width: 226px;
+    border: black;
+    border: 2px black solid;
+    position: absolute;
+    text-align: center;
+    left: 567px;
+    margin-top: 21px;
+    background-color: red;
+    border-radius: 9px;
+    height: 43px;
+    color: white;
+}
+
+#login-button:hover{
+    background-color: rgba(238, 53, 53, 0.829);
+}
+
+#register-button {
+    width: 226px;
+    border: black;
+    border: 2px black solid;
+    position: absolute;
+    text-align: center;
+    left: 567px;
+    margin-top: 21px;
+    background-color: red;
+    border-radius: 9px;
+    height: 43px;
+    color: white;
+}
+
+#register-button:hover{
+    background-color: rgba(238, 53, 53, 0.829);
+}
+
+#up-button{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(114, 114, 114, 0.37);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 33px;
+  }
+  
+  #up-button:hover {
+    background-color: #555;
+  }

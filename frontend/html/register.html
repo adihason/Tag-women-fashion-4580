@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>#Tag | Registretion</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <!-- <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+        crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        
+        <!-- <link rel="stylesheet" type="text/css" href="../css/topNavBar.css" /> -->
+        <link rel="stylesheet" type="text/css" href="../css/register.css" />
+    <link rel="stylesheet" type="text/css" href="../css/titles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/buttons.css" />
+
+
+        </head>
+    <body>
+            <a class="link-to-home" href="index.html">#Tag Women Fashion</a>
+            <h1 id="register-title" class="table-title">Join Us</h1>
+            <div id="register-form">
+                <table id="registration" cellspacing="10px">
+                    <tr>
+                        <td>
+                            <span class="title-login">First Name:</span><br>
+                            <input id="first-name-register" class="register-inputs" type="text" name="first-name" placeholder="first name" required/>
+                        </td>
+                        <td>
+                            <span class="title-login">Last Name:</span><br>
+                            <input id="last-name-register" class="register-inputs" type="text" name="last-name" placeholder="last name" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="title-login">Email:</span><br>
+                            <input id="email-register" class="register-inputs" type="email" name="email" placeholder="email" size="47" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="title-login">Date Of Birth:</span><br>
+                            <input id="birthday-register" class="register-inputs" type="date" name="birthday" size="47" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="title-login">Password:</span><br>
+                            <input id="password-register" class="register-inputs" id="psw" type="password" name="password" placeholder="password" size="47" minlength="6" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button id="register-button" onclick="addUser();">Join Now</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- <span id="passwordMsg" style="visibility: hidden;">
+                    ,הסיסמא חייבת להכיל לפחות 6 תווים<br>
+                    .כולל אותיות גדולות, אותיות קטנות ומספרים
+            </span> -->
+            <p id="login-link">Already Registered? <a href="login.html">click here</a></p>
+            <script type="text/javascript" src="../js/user.js"></script>
+            <script type="text/javascript" src="../js/createNewUserInstance.js"></script>
+        <script type="text/javascript" src="../js/addUser.js"></script>
+        </body>
+    </html>

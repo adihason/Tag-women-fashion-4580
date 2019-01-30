@@ -1,0 +1,24 @@
+div#register-form {
+    margin-left: 469px;
+}
+
+
+
+
+body{
+    font-family: 'Zilla Slab', serif;
+}
+
+p#login-link {
+    margin-left: 575px;
+    margin-top: 93px;
+    font-weight: bold;
+}
+
+
+
+input.register-inputs {
+    border-radius: 7px;
+}
+
+
