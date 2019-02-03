@@ -1,9 +1,13 @@
+// window.domElements = {
+//     $welcomeUserDiv: document.querySelector("#welcome-user")
+// }
+
 
 $("header").load("topNavBar.html", () => {
-    const $welomeUserDiv = document.querySelector("#welcome-user");
+    const $welcomeUserDiv = document.querySelector("#welcome-user")
     const user = localStorage.getItem(`user`);
     if(user){
         const userObj = JSON.parse(user);
-        $welomeUserDiv.innerHTML = `Hi ${userObj.firstName}`;
+        $welcomeUserDiv.innerHTML = `Hi ${userObj.firstName}`;
     }
 });

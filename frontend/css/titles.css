@@ -14,7 +14,7 @@ h1{
 
 h1#register-title {
     margin-left: 601px;
-    margin-top: 61px;
+    margin-top: 78px;
 }
 
 .link-to-home{
@@ -30,8 +30,20 @@ h1#register-title {
 }
 
 .pages-title {
+    font-size: 44px;
+    background-color: #5a5a5a;
+    position: inherit;
+    text-align: center;
+    padding: 7px;
     font-family: 'Monoton', cursive;
+    color: white;
+}
+
+p.selector-title {
     position: absolute;
-    top: 62px;
-    left: 68px;
+    top: 108px;
+    right: 196px;
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    font-size: 19px;
 }

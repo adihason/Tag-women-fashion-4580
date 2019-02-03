@@ -1,7 +1,8 @@
-const vars = {
+window.domElements = {
     $loginEmailInput: document.querySelector("#email-login-input"),
     $loginPasswordInput: document.querySelector("#password-login-input"),
-    $invalidMessagePopUp: document.querySelector("#popup-text-invalid")
+    $invalidMessagePopUpLogin: document.querySelector("#popup-text-invalid-login"),
+    // $welcomeUserDiv: document.querySelector("#welcome-user")
 };
 
 
@@ -12,12 +13,12 @@ function route(path) {
 }
 
 function getUser() {
-    fetch(route(`user?email=${vars.$loginEmailInput.value}&password=${vars.$loginPasswordInput.value}`))
+    fetch(route(`user?email=${domElements.$loginEmailInput.value}&password=${domElements.$loginPasswordInput.value}`))
         .then(res => res.json())
         .then(resJsonBody => {
             const loggedUser = resJsonBody[0];
             if (!loggedUser) {
-                displayMsg(vars.$invalidMessagePopUp, 3000);
+                displayMsg("Invalid Email Or Password.", domElements.$invalidMessagePopUpLogin, 3000);
                 return;
             }
             const user = createNewUserInstance(loggedUser);
@@ -28,14 +29,14 @@ function getUser() {
 }
 
 
-function displayMsg(msgId, removeAfter) {
-    msgId.classList.remove("invisible");
-    // msgId.innerText = msg;
-    setTimeout(function () {
-        // msgId.innerText = "";
-        msgId.classList.add("invisible");
-    }, removeAfter);
-}
+// function displayMsg(msgId, removeAfter) {
+//     msgId.classList.remove("invisible");
+//     // msgId.innerText = msg;
+//     setTimeout(function () {
+//         // msgId.innerText = "";
+//         msgId.classList.add("invisible");
+//     }, removeAfter);
+// }
 
 // User.instancesStore = {};
 
@@ -44,8 +45,8 @@ function displayMsg(msgId, removeAfter) {
 //         return User.instancesStore[rawUser.email];
 //     }
 
-//     const firstName = rawUser["first_name"];
-//     const lastName = rawUser["last_name"];
+//     const firstName = rawUser["firstName"];
+//     const lastName = rawUser["lastName"];
 //     const password = rawUser["password"];
 //     const email = rawUser["emsil"];
 //     const birthday = rawUser["birthday"];
@@ -57,7 +58,7 @@ function displayMsg(msgId, removeAfter) {
 // }
 
 // function setWelcomeUser(userName){
-//     vars.$welcomUserSpan.innerHTML = `${userName.firstName} ${userName.lastName}`;
+//     domElements.$welcomUserSpan.innerHTML = `${userName.firstName} ${userName.lastName}`;
 // }
 
 
@@ -66,7 +67,7 @@ function displayMsg(msgId, removeAfter) {
 
 
 // function getUser() {
-//     fetch(route(`user?email=${vars.loginEmailInput.value}&password=${vars.loginPasswordInput.value}`))
+//     fetch(route(`user?email=${domElements.loginEmailInput.value}&password=${domElements.loginPasswordInput.value}`))
 //         .then(res => res.json())
 //         .then(jsonResBody => console.log("user: ", jsonResBody["fi"]));
 // }

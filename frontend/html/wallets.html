@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="../css/images.css" />
         <link rel="stylesheet" type="text/css" href="../css/titles.css" />
         <link rel="stylesheet" type="text/css" href="../css/buttons.css" />
+        <link rel="stylesheet" type="text/css" href="../css/modal.css" />
         <script type="text/javascript" src="../js/topButton.js"></script>
         <script type="text/javascript" src="../js/signOut.js"></script>
             </head>
@@ -31,23 +32,53 @@
 <body onload="loadImages(`walletsUrl`)">
    
     <h1 class="pages-title">Wallets</h1>
-    <div id="output-images" class="row-table"></div>
-    <div id="clone" class="card d-none" style="width: 18rem;">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"></li>
-            </ul>
-            <div class="card-body">
-              <button class="btn btn-dark"><a href="#" class="card-link"></a>Add to cart <i class='fas fa-cart-plus'></i></button>
-              <button class="btn btn-primary"><a href="#" class="card-link"></a>Like <i class="fa fa-heart"></i></button>
-            </div>
-          </div>
-        </div>
+    <div id="output-images" class="row-table">
+                <div id="clone" class="card d-none" style="width: 18rem;">
+                        <img src="" class="card-img-top" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"></li>
+                        </ul>
+                        <div class="card-body">
+                          <button type="button" class="btn btn-dark" data-toggle="modal" onclick="openModal(this.parentNode.parentNode.childNodes, this.id)" data-target=""><a href="#" class="card-link"></a>Add To Bag <i class='fas fa-cart-plus'></i></button>
+                          <button class="btn btn-primary" onclick="toggle(this.parentNode.parentNode.id)"><a href="#" class="card-link"></a>Like <i class="fa fa-heart"></i></button>
+                        </div>
+                      </div>
+                     
+                    </div>
+            
+               <!-- Modal -->
+               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <!-- <div class="modal-body">
+                              ...
+                            </div> -->
+                            <div class="card mb-3">
+                                <img src="" class="card-img-top modal-img" alt="">
+                                <div class="card-body-modal">
+                                  <p class="card-text descreption"></p>
+                                  <p class="card-text price"></p>
+                                </div>
+                              </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-success">Add To Bag</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
         <a href="#top"><button id="up-button" title="Go to top"><i class='fas fa-arrow-up'></i></button></a>
 </body>
+<script type="text/javascript" src="../js/image.js"></script>
+<script type="text/javascript" src="../js/like.js"></script>
+<script type="text/javascript" src="../js/likeFunctions.js"></script>
 <script type="text/javascript" src="../js/loadImages.js"></script>
-
 </html>

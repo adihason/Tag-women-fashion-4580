@@ -1,9 +1,11 @@
 function createNewUserInstance(user) {
-    const firstName = user["first_name"];
-    const lastName = user["last_name"];
+    const firstName = user["firstName"];
+    const lastName = user["lastName"];
     const password = user["password"];
     const email = user["email"];
     const birthday = user["birthday"];
     const id = user["id"];
-    return new User(id, firstName, lastName, email, password, birthday);
+    const likes = user["likes"];
+    const items = user["items"];
+    return new User(id, firstName, lastName, email, password, birthday, likes, items);
 }
