@@ -1,5 +1,4 @@
-function signOutUser(){
-    // const $welomeUserDiv = document.querySelector("#welcome-user");
+function signOutUser() {
     localStorage.removeItem(`user`);
     domElements.$weclomeUserDiv.innerHTML = "";
 }

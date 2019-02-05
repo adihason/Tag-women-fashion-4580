@@ -17,24 +17,22 @@
                 crossorigin='anonymous'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-
-
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-
         <link rel="stylesheet" type="text/css" href="../css/topNavBar.css" />
         <link rel="stylesheet" type="text/css" href="../css/images.css" />
         <link rel="stylesheet" type="text/css" href="../css/titles.css" />
         <link rel="stylesheet" type="text/css" href="../css/buttons.css" />
         <link rel="stylesheet" type="text/css" href="../css/modal.css" />
+        <link rel="stylesheet" type="text/css" href="../css/popUpMsg.css" />
         <script type="text/javascript" src="../js/topButton.js"></script>
         <script type="text/javascript" src="../js/signOut.js"></script>
 </head>
+
 <header id="top">
         <script type="text/javascript" src="../js/loadTopNavBar.js"></script>
 </header>
 
 <body onload="loadImages(`eveningBagsUrl`)">
-
         <h1 class="pages-title">Evening Bags</h1>
         <div id="output-images" class="row-table">
                 <div id="clone" class="card d-none" style="width: 18rem;">
@@ -46,13 +44,14 @@
                                 <li class="list-group-item"></li>
                         </ul>
                         <div class="card-body">
-                                <button type="button" class="btn btn-dark" data-toggle="modal" onclick="openModal(this.parentNode.parentNode.childNodes, this.id)"
+                                <button type="button" class="btn btn-warning" data-toggle="modal" onclick="openModal(this.parentNode.parentNode.childNodes, this.id)"
+                                        ; data-target=""><a href="#" class="card-link"></a>View Item <i class='far fa-eye'></i></button>
+                                <button type="button" class="btn btn-dark" onclick="addItemBag(this.parentNode.parentNode.id)"
                                         data-target=""><a href="#" class="card-link"></a>Add To Bag <i class='fas fa-cart-plus'></i></button>
-                                <button class="btn btn-primary" onclick="toggle(this.parentNode.parentNode.id)"><a
-                                                href="#" class="card-link"></a>Like <i class="fa fa-heart"></i></button>
+                                <button class="btn btn-primary" onclick="toggle(this.parentNode.parentNode.id)"><a href="#"
+                                                class="card-link"></a>Like <i class="fa fa-heart"></i></button>
                         </div>
                 </div>
-
         </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -81,12 +80,17 @@
                         </div>
                 </div>
         </div>
+        <div id="popup-text-success" class="alert alert-success invisible" role="alert">
+        </div>
+        <div id="popup-text-remove" class="alert alert-danger invisible" role="alert">
+        </div>
         <a href="#top"><button id="up-button" title="Go to top"><i class='fas fa-arrow-up'></i></button></a>
-
 </body>
 <script type="text/javascript" src="../js/image.js"></script>
 <script type="text/javascript" src="../js/like.js"></script>
 <script type="text/javascript" src="../js/likeFunctions.js"></script>
 <script type="text/javascript" src="../js/loadImages.js"></script>
-
+<script type="text/javascript" src="../js/cart.js"></script>
+<script type="text/javascript" src="../js/popUpMsg.js"></script>
+<script type="text/javascript" src="../js/deleteUser.js"></script>
 </html>

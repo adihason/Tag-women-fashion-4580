@@ -5,8 +5,30 @@
     text-align: center;
     width: 344px;
     position: absolute;
-    top: 19px;
+    top: 30px;
     left: 503px;
 }
 
 
+div#popup-text-remove-wishlist,
+#popup-text-remove-cart,
+#popup-text-remove
+ {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    text-align: center;
+    width: 344px;
+    position: fixed;
+    left: 503px;
+    top: 133px;
+}
+
+
+#popup-text-success{
+    text-align: center;
+    width: 344px;
+    position: fixed;
+    left: 503px;
+    top: 133px;
+}

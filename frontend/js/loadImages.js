@@ -1,21 +1,14 @@
+window.domElements = {
+    $targetContainer: document.querySelector("#output-images"),
+    $template: document.querySelector("#clone")
+};
 
-    // const $targetContainer = document.querySelector("#output-images");
-    // const $template = document.querySelector("#clone");
-
-    // const vars = {
-    //     $targetContainer: document.querySelector("#output-images"),
-    //     $template: document.querySelector("#clone"),
-    // };
-
-    window.domElements = {
-        $targetContainer: document.querySelector("#output-images"),
-        $template: document.querySelector("#clone")
-    };
 
 const BASE_URL = "http://localhost:3000";
 function route(path) {
     return `${BASE_URL}/${path}`;
 }
+
 
 function loadImages(images) {
     fetch(route(`${images}`))
@@ -29,7 +22,8 @@ function loadImages(images) {
         .catch(reason => console.log("Error", reason.message));
 }
 
-function createNewImageInstance(image){
+
+function createNewImageInstance(image) {
     const id = image["id"];
     const url = image["url"];
     const description = image["description"];
@@ -37,7 +31,8 @@ function createNewImageInstance(image){
     return new Image(id, url, description, price);
 }
 
-function createNewImage(image, $targetContainer, $template, images, i){
+
+function createNewImage(image, $targetContainer, $template, images, i) {
     const $clonedContainer = $template.cloneNode(true);
     const id = `${images}-${i}`;
     $clonedContainer.id = `card-${id}`;
@@ -45,6 +40,7 @@ function createNewImage(image, $targetContainer, $template, images, i){
     $clonedContainer.querySelector(".card-img-top").id = `img-${id}`;
     $clonedContainer.querySelector(".card-title").innerHTML = image.description;
     $clonedContainer.querySelector(".list-group-item").innerHTML = `price: ${image.price}`;
+    $clonedContainer.querySelector(".btn-warning").id = `view-btn-${id}`;
     $clonedContainer.querySelector(".btn-dark").id = `cart-btn-${id}`;
     $clonedContainer.querySelector(".btn-primary").id = `like-btn-${id}`;
     $clonedContainer.classList.remove("d-none");
@@ -52,7 +48,8 @@ function createNewImage(image, $targetContainer, $template, images, i){
     checkLikedButtonAndChangeColor($clonedContainer.id);
 }
 
-function openModal(cardId, btnId){
+
+function openModal(cardId, btnId) {
     let imgUrl = cardId[1].getAttribute("src");
     document.querySelector(".modal-img").setAttribute("src", imgUrl);
     document.querySelector(".descreption").innerHTML = cardId[3].textContent;
@@ -60,11 +57,12 @@ function openModal(cardId, btnId){
     document.getElementById(btnId).setAttribute("data-target", `#exampleModal`);
 }
 
-function checkLikedButtonAndChangeColor(cardId){
-    if(`user` in localStorage){
+
+function checkLikedButtonAndChangeColor(cardId) {
+    if (`user` in localStorage) {
         const user = JSON.parse(localStorage.getItem(`user`));
-        let isItemLiked = user.likes.find(currentCardId => currentCardId===cardId);
-        if(isItemLiked){
+        let isItemLiked = user.likes.find(i => i.likeId === cardId);
+        if (isItemLiked) {
             changeColorAfterPressLike(cardId);
         }
     }

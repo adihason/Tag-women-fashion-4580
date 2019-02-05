@@ -47,3 +47,10 @@ p.selector-title {
     font-weight: bold;
     font-size: 19px;
 }
+
+h1#empty-wishlist-title,
+#empty-cart-title {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 61px;
+}

@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html>
 
-        <head>
-                <title>#Tag | Sneakers</title>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
-    crossorigin='anonymous'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-
-
-<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-
-<link rel="stylesheet" type="text/css" href="../css/topNavBar.css" />
-<link rel="stylesheet" type="text/css" href="../css/buttons.css" />
-        <link rel="stylesheet" type="text/css" href="../css/images.css" />
+<head>
+        <title>#Tag | Wish List</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+                integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+                crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/topNavBar.css" />
         <link rel="stylesheet" type="text/css" href="../css/titles.css" />
+        <link rel="stylesheet" type="text/css" href="../css/buttons.css" />
+        <link rel="stylesheet" type="text/css" href="../css/images.css" />
+        <link rel="stylesheet" type="text/css" href="../css/popUpMsg.css" />
+        <link rel="stylesheet" type="text/css" href="../css/modal.css" />
         <script type="text/javascript" src="../js/topButton.js"></script>
         <script type="text/javascript" src="../js/signOut.js"></script>
-            </head>
-            <header id="top">
-                    <script type="text/javascript" src="../js/loadTopNavBar.js"></script>
-            </header>
+</head>
+
+<header id="top">
+        <script type="text/javascript" src="../js/loadTopNavBar.js"></script>
+</header>
 
 <body onload="loadWishList()">
-   
-
-    <h1 class="pages-title">Saved Items</h1>
-    <div id="output-images" class="row-table"></div>
-    <div id="clone" class="card d-none" style="width: 18rem;">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"></li>
-            </ul>
-            <div class="card-body">
-              <button class="btn btn-dark"><a href="#" class="card-link"></a>Add To Bag <i class='fas fa-cart-plus'></i></button>
-              <button class="btn btn-primary"><a href="#" class="card-link"></a>Remove Item <i class="fa fa-heart"></i></button>
-            </div>
-          </div>
+        <h1 class="pages-title">Saved Items</h1>
+        <div id="output-images" class="row-table">
+                <div id="clone" class="card d-none" style="width: 18rem;">
+                        <img src="" class="card-img-top" alt="">
+                        <div class="card-body">
+                                <h5 class="card-title"></h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                <li class="list-group-item"></li>
+                        </ul>
+                        <div class="card-body">
+                                <button type="button" class="btn btn-warning" onclick="openModal(this.parentNode.parentNode.childNodes, this.id)"
+                                        ; data-target=""><a href="#" class="card-link"></a>View Item <i class='far fa-eye'></i></button>
+                                <button type="button" class="btn btn-dark" data-toggle="modal" onclick="addItemBag(this.parentNode.parentNode.id)"
+                                        data-target=""><a href="#" class="card-link"></a>Add To Bag <i class='fas fa-cart-plus'></i></button>
+                                <button class="btn btn-primary" onclick="toggle(this.parentNode.parentNode.id); removeItemFromWishList(this.id);"><a
+                                                href="#" class="card-link"></a>Remove Item </button>
+                        </div>
+                </div>
         </div>
+        <div id="popup-text-success" class="alert alert-success invisible" role="alert">
+        </div>
+        <div id="popup-text-remove-wishlist" class="alert alert-danger invisible" role="alert">
+        </div>
+        <div id="empty-wish-list" class="d-none">
+        </div>
+        <a href="tops.html"> <button id="shop-now-btn" type="button" class="btn btn-secondary btn-lg d-none">Shop Now</button></a>
         <a href="#top"><button id="up-button" title="Go to top"><i class='fas fa-arrow-up'></i></button></a>
-
 </body>
 <script type="text/javascript" src="../js/image.js"></script>
 <script type="text/javascript" src="../js/like.js"></script>
 <script type="text/javascript" src="../js/likeFunctions.js"></script>
 <script type="text/javascript" src="../js/loadImages.js"></script>
 <script type="text/javascript" src="../js/wishList.js"></script>
+<script type="text/javascript" src="../js/popUpMsg.js"></script>
+<script type="text/javascript" src="../js/deleteUser.js"></script>
 </html>
