@@ -107,7 +107,7 @@ function createNewImageInCart($targetContainer, $template, item) {
 
 
 async function userPressToRemoveItem(itemId) {
-    const user = JSON.parse(localStorage.getItem(`user`));
+    const user = JSON.parse();
     user.items = user.items.filter(function (item) {
         return !(item.itemId === itemId)
     });

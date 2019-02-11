@@ -18,8 +18,7 @@ async function userPressToAddLike(itemId) {
     }
 }
 
-
-async function userPressToRemoveLike(itemId) {
+async function userPressToRemoveLike(itemId, user, likes) {
     const user = JSON.parse(localStorage.getItem(`user`));
     user.likes = user.likes.filter(function (item) {
         return !(item.likeId === itemId)
